@@ -45,5 +45,5 @@ class AddTwoNumbers(object):
                 l2 = l2.next
             else:
                 l.val = rem
-                rem = 0;
+                rem = 0
         return ll.next
