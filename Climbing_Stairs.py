@@ -28,42 +28,42 @@ Constraints:
 # # Brute Force
 # class Solution:
 #     def climbStairs(self, n: int) -> int:
-#         return self.climb(0, n);
+#         return self.climb(0, n)
 
 #     def climb(self, i: int, n: int) -> int:
 #         if i > n:
-#             return 0;
+#             return 0
 #         if i == n:
-#             return 1;
-#         return self.climb(i+1, n) + self.climb(i+2, n);
+#             return 1
+#         return self.climb(i+1, n) + self.climb(i+2, n)
 
 # # Recursion with Memoization
 # class Solution:
 #     def climbStairs(self, n: int) -> int:
-#         mem = [0] * n;
-#         return self.climb(0, mem, n);
+#         mem = [0] * n
+#         return self.climb(0, mem, n)
 
 #     def climb(self, i: int, mem: list, n: int) -> int:
 #         if i > n:
-#             return 0;
+#             return 0
 #         if i == n:
-#             return 1;
+#             return 1
 #         if mem[i] > 0:
-#             return mem[i];
-#         mem[i] = self.climb(i+1, mem, n) + self.climb(i+2, mem, n);
-#         return mem[i];
+#             return mem[i]
+#         mem[i] = self.climb(i+1, mem, n) + self.climb(i+2, mem, n)
+#         return mem[i]
 
 # # Dynamic Programming
 # class Solution:
 #     def climbStairs(self, n: int) -> int:
 #         if n == 1:
-#             return 1;
-#         dp = [0] * n;
-#         dp[0] = 1;
-#         dp[1] = 2;
+#             return 1
+#         dp = [0] * n
+#         dp[0] = 1
+#         dp[1] = 2
 #         for i in range(2, n):
-#             dp[i] = dp[i - 1] + dp[i - 2];
-#         return dp[n - 1];
+#             dp[i] = dp[i - 1] + dp[i - 2]
+#         return dp[n - 1]
 
 # Fibonacci Number
 class Solution:
